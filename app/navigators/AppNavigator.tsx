@@ -1,11 +1,11 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import LoginScreen from 'app/screens/LoginScreen';
-import HomeScreen from 'app/screens/HomeScreen';
-import PacienteScreen from 'app/screens/PacienteScreen';
-import ConsultaScreen from 'app/screens/ConsultaScreen';
-import ProntuarioScreen from 'app/screens/ProntuarioScreen';
+import LoginScreen from '../screens/LoginScreen';
+import HomeScreen from '../screens/HomeScreen';
+import PacienteScreen from "../screens/PatientCadastroScreen";
+import ConsultaScreen from "../screens/ConsultationScreen";
+import ProntuarioScreen from "../screens/AttendanceForm";
 
 const Stack = createStackNavigator();
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { supabase } from 'app/services/database/supabase';
+import { supabase } from '../services/database/supabaseClient';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -11,7 +11,7 @@ const HomeScreen = () => {
       await supabase.auth.signOut();
       navigation.navigate('Login');
     } catch (error) {
-      console.error('Error logging out:', error.message);
+      console.error('Error logging out:', (error as any).message);
     }
   };
 

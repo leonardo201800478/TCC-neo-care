@@ -1,7 +1,6 @@
 // app/services/api/api.ts
 import { create } from 'apisauce'
-import { ApiProblem, ApiResponse, ApiErrorType } from './apiProblem'
-
+import { ApiProblem, ApiResponse, ApiErrorType } from './apiProblem.js'
 const api = create({
   baseURL: 'https://api.neocare.com',
   headers: {

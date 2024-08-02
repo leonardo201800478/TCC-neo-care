@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
-import { supabase } from '../services/supabaseClient';
-import { insertPatient } from '../services/localDatabase';
+import { supabase } from "../services/database/supabaseClient";
+import { insertPatient } from '../services/database/localDatabase';
 
 const PatientForm = () => {
   const [patient, setPatient] = useState({
@@ -68,3 +67,7 @@ const styles = StyleSheet.create({
 });
 
 export default PatientForm;
+function useState(arg0: { id: string; created_at: string; nomepatient: string; cpfpatient: string; dataNascpatient: string; emailpatient: string; fonepatient: string; ceppatient: string; ufpatient: string; cidadepatient: string; bairropatient: string; logradouropatient: string; numeropatient: string; inserted_at: string; updated_at: string; }): [any, any] {
+  throw new Error('Function not implemented.');
+}
+

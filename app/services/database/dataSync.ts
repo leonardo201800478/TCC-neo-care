@@ -1,6 +1,7 @@
 import { supabase } from './supabaseClient';
 import { DatabaseSync } from 'powersync';
 import { AsyncStorage } from 'react-native';
+import { resolveConflicts } from './conflictResolution';
 
 export const syncData = async () => {
   const localData = await AsyncStorage.getItem('patients');

@@ -1,25 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
-import { supabase } from '../services/supabaseClient';
+import { supabase } from "../services/database/supabaseClient";
 
 const UpdateProfileScreen = () => {
-  const [profile, setProfile] = useState({
+  const [profile, setProfile] = useState<{
+    nomeUser: string;
+    emailUser: string;
+  }>({
     nomeUser: '',
     emailUser: '',
     // outros campos...
   });
 
   useEffect(() => {
-    const fetchProfile = async () => {
-      const { data, error } = await supabase.auth.getUser();
-      if (data) {
-        setProfile(data.user);
-      } else {
-        console.error(error.message);
-      }
-    };
-
-    fetchProfile();
+      const fetchData = async () => {
+          const { data, error } = await supabase.auth.getUser();
+          if (data) {
+              setProfile(data.user);
+          } else {
+              console.error(error.message);
+          }
+      };
+  
+      fetchData();
   }, []);
 
   const handleUpdateProfile = async () => {
@@ -67,3 +70,4 @@ const styles = StyleSheet.create({
 });
 
 export default UpdateProfileScreen;
+

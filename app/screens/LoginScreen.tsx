@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
-import { supabase } from '../services/supabaseClient';
+import { useRouter} from 'expo-router';
+import { supabase } from "../services/database/supabaseClient";
 
 const LoginScreen = () => {
   const router = useRouter();
@@ -54,3 +53,7 @@ const styles = StyleSheet.create({
 });
 
 export default LoginScreen;
+function useState(arg0: string): [any, any] {
+  throw new Error('Function not implemented.');
+}
+

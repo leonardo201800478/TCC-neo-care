@@ -1,7 +1,6 @@
 // Cadastro de Pacientes
-import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
-import { supabase } from './supabaseClient';
+import { supabase } from "../services/database/supabaseClient";
 
 const PatientCRUDScreen = () => {
   const [patient, setPatient] = useState({
@@ -80,3 +79,7 @@ const styles = StyleSheet.create({
 });
 
 export default PatientCRUDScreen;
+function useState(arg0: { nomepatient: string; idade: string; contato: string; }): [any, any] {
+  throw new Error('Function not implemented.');
+}
+

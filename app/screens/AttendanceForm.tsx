@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
-import { supabase } from '../services/supabaseClient';
-import { insertAttendance } from '../services/localDatabase';
+import { supabase } from '../services/database/supabaseClient';
+import { insertAttendance } from '../services/database/localDatabase';
 
 const AttendanceForm = () => {
   const [attendance, setAttendance] = useState({
@@ -84,3 +84,7 @@ const styles = StyleSheet.create({
 });
 
 export default AttendanceForm;
+function useState(arg0: { id: string; created_at: string; created_by: string; doctor_id: string; patient_id: string; consultation_id: string; hist: string; tipo: string; taxMae: string; pesoMae: string; estaturaMae: string; paMae: string; tipoSangMae: string; tax: string; apgar1: string; apgar5: string; peso: string; comprimento: string; pc: string; gesta: string; para: string; cesareas: string; abortos: string; abotEspon: string; vacinasMae: string; nascVivos: string; mortNeo: string; filhos: string; intern: boolean; cirg: boolean; quantCirg: string; consulPre: boolean; quantConsulPre: string; tratMae: boolean; descrMae: string; inserted_at: string; updated_at: string; }): [any, any] {
+  throw new Error('Function not implemented.');
+}
+

@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
-import { Router } from 'expo-router';
-import { initializeDatabase } from './services/localDatabase';
+import React from 'react';
+import { useEffect } from 'react';
+import Router from './app/navigators/AppNavigator';
+import { initializeDatabase } from './app/services/database/localDatabase';
 
 const App = () => {
   useEffect(() => {

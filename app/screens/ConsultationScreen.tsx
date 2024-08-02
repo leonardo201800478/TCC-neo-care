@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 import { View, TextInput, Button, FlatList, Text, StyleSheet } from 'react-native';
-import { supabase } from '../services/supabaseClient';
+import { supabase } from '../services/database/supabaseClient';
 
 const ConsultationScreen = () => {
   const [patientName, setPatientName] = useState('');
@@ -83,3 +82,7 @@ const styles = StyleSheet.create({
 });
 
 export default ConsultationScreen;
+function useState(arg0: string): [any, any] {
+  throw new Error('Function not implemented.');
+}
+
